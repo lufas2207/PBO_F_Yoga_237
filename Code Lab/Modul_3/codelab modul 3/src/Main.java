@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    // Superclass
+
     static class KarakterGame {
         private String nama;
         private int kesehatan;
@@ -33,7 +33,7 @@ public class Main {
         }
     }
 
-    // Subclass Pahlawan
+
     static class Pahlawan extends KarakterGame {
         public Pahlawan(String nama, int kesehatan) {
             super(nama, kesehatan);
@@ -47,7 +47,7 @@ public class Main {
         }
     }
 
-    // Subclass Musuh
+
     static class Musuh extends KarakterGame {
         public Musuh(String nama, int kesehatan) {
             super(nama, kesehatan);
@@ -61,7 +61,7 @@ public class Main {
         }
     }
 
-    // Main method
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
