@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.BukuController"
+            style="-fx-background-color: #f5f6fa;">
+    <children>
+        <!-- Judul -->
+        <Label layoutX="300" layoutY="10" text="Manajemen Buku"
+               style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2f3640;"/>
+
+        <!-- Panel Form -->
+        <VBox layoutX="20" layoutY="50" spacing="10"
+              style="-fx-background-color: #ffffff; -fx-padding: 20px; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);">
+            <Label text="Form Tambah Buku" style="-fx-font-weight: bold; -fx-text-fill: #2f3640;" />
+
+            <TextField fx:id="tfKode" promptText="Kode Buku" />
+            <TextField fx:id="tfJudul" promptText="Judul" />
+            <TextField fx:id="tfPengarang" promptText="Pengarang" />
+            <TextField fx:id="tfTahun" promptText="Tahun Terbit" />
+            <CheckBox fx:id="cbTersedia" text="Tersedia" />
+
+            <Button text="Tambah Buku" onAction="#tambahBuku"
+                    style="-fx-background-color: #40739e; -fx-text-fill: white; -fx-font-weight: bold;"/>
+        </VBox>
+
+        <!-- Tabel Buku -->
+        <TableView fx:id="tableBuku" layoutX="300" layoutY="50" prefWidth="460" prefHeight="250"
+                   style="-fx-background-color: white; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+            <columns>
+                <TableColumn fx:id="colKode" text="Kode Buku" prefWidth="90"/>
+                <TableColumn fx:id="colJudul" text="Judul" prefWidth="120"/>
+                <TableColumn fx:id="colPengarang" text="Pengarang" prefWidth="120"/>
+                <TableColumn fx:id="colTahun" text="Tahun Terbit" prefWidth="80"/>
+                <TableColumn fx:id="colTersedia" text="Status" prefWidth="60"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

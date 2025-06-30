@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.AnggotaController"
+            style="-fx-background-color: #f5f6fa;">
+    <children>
+        <Label layoutX="300" layoutY="10" text="Manajemen Anggota"
+               style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2f3640;"/>
+
+        <VBox layoutX="20" layoutY="50" spacing="10"
+              style="-fx-background-color: #ffffff; -fx-padding: 20px; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);">
+            <Label text="Form Tambah Anggota" style="-fx-font-weight: bold; -fx-text-fill: #2f3640;" />
+
+            <TextField fx:id="tfID" promptText="ID Anggota" />
+            <TextField fx:id="tfNama" promptText="Nama" />
+            <TextField fx:id="tfAlamat" promptText="Alamat" />
+            <TextField fx:id="tfHP" promptText="Nomor HP" />
+
+            <Button text="Tambah Anggota" onAction="#tambahAnggota"
+                    style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold;"/>
+        </VBox>
+
+        <TableView fx:id="tableAnggota" layoutX="300" layoutY="50" prefWidth="460" prefHeight="250"
+                   style="-fx-background-color: white; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+            <columns>
+                <TableColumn fx:id="colID" text="ID Anggota" prefWidth="100"/>
+                <TableColumn fx:id="colNama" text="Nama" prefWidth="150"/>
+                <TableColumn fx:id="colAlamat" text="Alamat" prefWidth="120"/>
+                <TableColumn fx:id="colHP" text="Nomor HP" prefWidth="90"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
